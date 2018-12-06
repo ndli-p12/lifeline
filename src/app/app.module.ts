@@ -1,10 +1,12 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatBadgeModule,
@@ -15,20 +17,29 @@ import {
   MatListModule,
   MatProgressBarModule,
   MatSidenavModule,
-  MatToolbarModule, MatGridListModule, MatMenuModule
+  MatToolbarModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatInputModule,
+  MatFormFieldModule
 } from '@angular/material';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FlexLayoutModule,
     LayoutModule,
     MatBadgeModule,
     MatButtonModule,
@@ -40,7 +51,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatSidenavModule,
     MatToolbarModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
