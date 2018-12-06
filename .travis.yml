@@ -5,6 +5,9 @@ language: node_js
 node_js:
   - "8"
 
+services:
+  - docker
+
 cache:
   directories:
      - ./node_modules
@@ -14,3 +17,12 @@ install:
 
 script:
   - npm run build -- --prod
+
+after_success:
+  - docker build -t ndlip12/lifeline .
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
