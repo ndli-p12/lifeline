@@ -10,6 +10,8 @@ export class MapComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
   const myfrugalmap = L.map('frugalmap').locate({setView: true, maxZoom: 15});
 
