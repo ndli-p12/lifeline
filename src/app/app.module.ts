@@ -18,12 +18,14 @@ import {
   MatToolbarModule, MatGridListModule, MatMenuModule
 } from '@angular/material';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MapComponent } from './components/map/map.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    MapComponent
   ],
   imports: [
     BrowserAnimationsModule,
