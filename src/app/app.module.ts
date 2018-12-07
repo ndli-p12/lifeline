@@ -22,13 +22,17 @@ import {
   MatMenuModule,
   MatInputModule,
   MatFormFieldModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTableModule
 } from '@angular/material';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { ChecklistComponent } from './components/checklist/checklist.component';
+import { ActivityComponent } from './components/activity/activity.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,8 @@ import { ChecklistComponent } from './components/checklist/checklist.component';
     LoginComponent,
     MapComponent,
     WeatherComponent,
-    ChecklistComponent
+    ChecklistComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -60,7 +65,10 @@ import { ChecklistComponent } from './components/checklist/checklist.component';
     MatMenuModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
