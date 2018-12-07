@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
+import { ChecklistComponent } from './components/checklist/checklist.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'map', component: MapComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'checklist', component: ChecklistComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 

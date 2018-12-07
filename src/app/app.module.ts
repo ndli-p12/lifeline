@@ -21,13 +21,14 @@ import {
   MatGridListModule,
   MatMenuModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatCheckboxModule
 } from '@angular/material';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
 import { WeatherComponent } from './components/weather/weather.component';
-
+import { ChecklistComponent } from './components/checklist/checklist.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { WeatherComponent } from './components/weather/weather.component';
     DashboardComponent,
     LoginComponent,
     MapComponent,
-    WeatherComponent
+    WeatherComponent,
+    ChecklistComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -57,7 +59,8 @@ import { WeatherComponent } from './components/weather/weather.component';
     MatGridListModule,
     MatMenuModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

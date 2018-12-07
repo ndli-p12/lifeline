@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="20px">
+  <mat-selection-list #shoes>
+    <mat-list-option
+      *ngFor="let task of taskList"
+      checkboxPosition="before"
+      [selected]="task.checked">
+      {{task.text}}
+    </mat-list-option>
+    <mat-list-item class="add-item" checkboxPosition="before">
+      <button mat-icon-button color="primary" (click)="addItem()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <span matLine>
+        <mat-form-field fxFlex>
+          <input
+            matInput
+            placeholder="Ajouter une tâche"
+            [formControl]="taskFormControl"
+            (keyup.enter)="addItem()">
+        </mat-form-field>
+      </span>
+    </mat-list-item>
+  </mat-selection-list>
+</div>
