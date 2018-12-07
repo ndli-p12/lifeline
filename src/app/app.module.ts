@@ -26,6 +26,7 @@ import {
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
+import { WeatherComponent } from './components/weather/weather.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MapComponent } from './components/map/map.component';
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    MapComponent
+    MapComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserAnimationsModule,
