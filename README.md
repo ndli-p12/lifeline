@@ -4,7 +4,7 @@ Projet généré avec Angular CLI (https://github.com/angular/angular-cli) versi
 
 ## Déploiement en développement
 
-Pour lancer le projet en mode développement, vous pouvez utiliser la commande 'ng servce'. Puis vous rendre sur votre navigateur à l'adresse `http://localhost:4200/`. Les modifications apportées au code seront automatiquement rechargées.
+Pour lancer le projet en mode développement, vous pouvez utiliser la commande `ng serve`. Puis vous rendre sur votre navigateur à l'adresse `http://localhost:4200/`. Les modifications apportées au code seront automatiquement rechargées.
 
 ## Build production
 
