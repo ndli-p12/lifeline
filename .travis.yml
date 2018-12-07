@@ -19,7 +19,7 @@ script:
   - npm run build -- --prod
 
 after_success:
-  - docker build -t ndlip12/lifeline .
+  - docker build -t esuau/lifeline .
 
 deploy:
   provider: script
