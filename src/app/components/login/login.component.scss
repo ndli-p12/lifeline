@@ -1,0 +1,22 @@
+.login-container {
+  height: 100%;
+}
+
+.mat-card {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+
+  .mat-card-title {
+    margin: auto;
+  }
+}
+
+.form {
+  width: 100%;
+
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
