@@ -22,6 +22,7 @@ import {
   MatMenuModule,
   MatInputModule,
   MatFormFieldModule,
+  MatCheckboxModule,
   MatDatepickerModule,
   MatNativeDateModule,
   MatTableModule
@@ -30,8 +31,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { ChecklistComponent } from './components/checklist/checklist.component';
 import { ActivityComponent } from './components/activity/activity.component';
-
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ActivityComponent } from './components/activity/activity.component';
     LoginComponent,
     MapComponent,
     WeatherComponent,
+    ChecklistComponent,
     ActivityComponent
   ],
   imports: [
@@ -63,6 +65,7 @@ import { ActivityComponent } from './components/activity/activity.component';
     MatMenuModule,
     MatInputModule,
     MatFormFieldModule,
+    MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatTableModule

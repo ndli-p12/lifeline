@@ -1,0 +1,9 @@
+@import '../../../styles';
+
+.add-item {
+  color: mat-color($app-primary, default);
+  mat-icon,
+  span {
+    color: inherit;
+  }
+}
