@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
 import { ChecklistComponent } from './components/checklist/checklist.component';
 import { ActivityComponent } from './components/activity/activity.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'checklist', component: ChecklistComponent },
   { path: 'activity', component: ActivityComponent },
+  { path: 'bot', component: ChatbotComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 

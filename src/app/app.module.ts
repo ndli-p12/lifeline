@@ -33,6 +33,8 @@ import { MapComponent } from './components/map/map.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { ChecklistComponent } from './components/checklist/checklist.component';
 import { ActivityComponent } from './components/activity/activity.component';
+import { SafePipe } from './pipes/safe.pipe';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ActivityComponent } from './components/activity/activity.component';
     MapComponent,
     WeatherComponent,
     ChecklistComponent,
-    ActivityComponent
+    ActivityComponent,
+    SafePipe,
+    ChatbotComponent
   ],
   imports: [
     BrowserAnimationsModule,
