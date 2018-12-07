@@ -1,24 +1,14 @@
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-list cols="2" rowHeight="400px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
+      <mat-card class="dashboard-card" [ngStyle]="{ 'padding': card.component === 'map' ? 0 : auto }">
         <mat-card-header>
-          <mat-card-title>
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <div *ngIf="!card.component">Card Content Here</div>
-          <div *ngIf="card.component === 'map'">
-            <app-map>
-            </app-map>
+          <div class="map-card" *ngIf="card.component === 'map'">
+            <app-map></app-map>
           </div>
           <app-weather *ngIf="card.component === 'weather'"></app-weather>
         </mat-card-content>
@@ -26,3 +16,4 @@
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+
