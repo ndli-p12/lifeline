@@ -21,12 +21,16 @@ import {
   MatGridListModule,
   MatMenuModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTableModule
 } from '@angular/material';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { ActivityComponent } from './components/activity/activity.component';
 
 
 @NgModule({
@@ -35,7 +39,8 @@ import { WeatherComponent } from './components/weather/weather.component';
     DashboardComponent,
     LoginComponent,
     MapComponent,
-    WeatherComponent
+    WeatherComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -57,7 +62,10 @@ import { WeatherComponent } from './components/weather/weather.component';
     MatGridListModule,
     MatMenuModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
