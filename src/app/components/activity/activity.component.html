@@ -1,0 +1,50 @@
+<table mat-table [dataSource]="list" class="mat-elevation-z6" *ngIf="list.length > 0">
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.date | date: 'yyyy-MM-dd'}} </td>
+  </ng-container>
+  <ng-container matColumnDef="rythme">
+    <th mat-header-cell *matHeaderCellDef> Rythme </th>
+    <td mat-cell *matCellDef="let element"> {{element.rythme}} </td>
+  </ng-container>
+  <ng-container matColumnDef="tension">
+    <th mat-header-cell *matHeaderCellDef> Tension </th>
+    <td mat-cell *matCellDef="let element"> {{element.tension}} </td>
+  </ng-container>
+  <ng-container matColumnDef="observation">
+    <th mat-header-cell *matHeaderCellDef> Observation </th>
+    <td mat-cell *matCellDef="let element"> {{element.observation}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div fxFill>
+  <mat-card>
+    <mat-card-header fxLayout="row" fxLayoutAlign="center center">
+      <mat-card-title>Check-up</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="form">
+        <mat-form-field>
+          <input matInput [matDatepicker]="today_date" [(ngModel)]="model.date" [ngModelOptions]="{standalone: true}">
+          <mat-datepicker-toggle matSuffix [for]="today_date"></mat-datepicker-toggle>
+          <mat-datepicker #today_date></mat-datepicker>
+        </mat-form-field><br /> 
+        <mat-form-field class="full-width">
+          <input matInput type="text" placeholder="Rythme cardiaque" [(ngModel)]="model.rythme" [ngModelOptions]="{standalone: true}">
+        </mat-form-field><br />
+        <mat-form-field class="full-width">
+          <input matInput type="text" placeholder="Tension" [(ngModel)]="model.tension" [ngModelOptions]="{standalone: true}">
+        </mat-form-field><br />
+        <mat-form-field class="full-width">
+          <input matInput type="text" placeholder="Observation" [(ngModel)]="model.observation" [ngModelOptions]="{standalone: true}">
+        </mat-form-field><br />
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <div fxFlex></div>
+      <button mat-raised-button color="primary" (click)="addItem()">AJOUTER</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
